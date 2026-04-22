@@ -25,8 +25,13 @@ body {
 a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--muted); text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--ink); }
 
+/* layout */
 .wrap { max-width: 740px; margin: 0 auto; padding: 0 28px; }
-header.site { border-bottom: 1px solid var(--rule); padding: 22px 0 18px; margin-bottom: 56px; }
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0 18px;
+  margin-bottom: 56px;
+}
 header.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 header.site .brand { font-family: var(--serif); font-size: 19px; font-weight: 600; letter-spacing: -0.005em; }
 header.site .brand a { text-decoration: none; }
@@ -37,9 +42,11 @@ header.site nav a:hover { text-decoration: underline; text-decoration-color: var
 
 main { padding-bottom: 96px; }
 
+/* vesica piscis */
 .vesica { display: block; width: 56px; height: 34px; margin: 0 auto 28px; opacity: 0.8; }
 .vesica.small { width: 32px; height: 19px; margin: 36px auto 22px; opacity: 0.55; }
 
+/* document head */
 .doc-head { margin-bottom: 32px; }
 .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; }
 .badge { padding: 4px 10px; border: 1px solid currentColor; }
@@ -53,13 +60,16 @@ h1.doc-title { font-family: var(--serif); font-size: 38px; font-weight: 600; lin
 .meta .row { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 2px 0; }
 .meta .label { color: var(--ink); font-weight: 500; }
 
+/* bundle integrity notice */
 .bundle-notice { border-left: 2px solid var(--ink); padding: 12px 0 12px 18px; margin: 0 0 32px; font-family: var(--sans); font-size: 13px; line-height: 1.55; color: var(--ink-soft); }
 .bundle-notice strong { color: var(--ink); font-weight: 600; }
 .bundle-notice a { color: var(--ink); }
 
+/* boundary frame */
 .boundary { border: 1px solid var(--ink); padding: 22px 24px; margin: 0 0 40px; font-family: var(--serif); font-style: italic; font-size: 15px; line-height: 1.6; position: relative; }
 .boundary::before { content: "Boundary"; position: absolute; top: -9px; left: 16px; background: var(--paper); padding: 0 8px; font-family: var(--mono); font-style: normal; font-size: 10px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--ink); }
 
+/* body typography */
 h2 { font-family: var(--serif); font-size: 24px; font-weight: 600; margin: 56px 0 14px; letter-spacing: -0.005em; }
 h3 { font-family: var(--serif); font-size: 19px; font-weight: 600; margin: 36px 0 12px; }
 p { margin: 0 0 16px; }
@@ -69,6 +79,7 @@ li { margin-bottom: 8px; }
 hr { border: none; height: 1px; background: var(--rule); margin: 56px 0; }
 code { font-family: var(--mono); font-size: 13px; background: var(--paper-soft); padding: 1px 6px; border-radius: 2px; }
 
+/* index hero */
 .hero { padding: 64px 0 24px; text-align: center; }
 .hero h1 { font-family: var(--serif); font-size: 44px; font-weight: 600; letter-spacing: -0.018em; margin: 0 0 14px; line-height: 1.15; }
 .hero .lede { font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--ink-soft); margin: 0 auto 36px; max-width: 540px; line-height: 1.5; }
@@ -84,6 +95,7 @@ code { font-family: var(--mono); font-size: 13px; background: var(--paper-soft);
 .doc-card .doc-card-title { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.3; margin-bottom: 4px; letter-spacing: -0.005em; }
 .doc-card .doc-card-sub { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-soft); }
 
+/* glossary */
 .term { padding: 20px 0; border-bottom: 1px solid var(--rule); }
 .term:last-child { border-bottom: none; }
 .term h3 { margin: 0 0 6px; font-size: 20px; }
@@ -91,11 +103,13 @@ code { font-family: var(--mono); font-size: 13px; background: var(--paper-soft);
 .term .term-def { margin: 0 0 8px; }
 .term .term-link { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; }
 
+/* footer */
 footer.site { border-top: 1px solid var(--rule); padding: 28px 0 56px; margin-top: 80px; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
 footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 footer.site a { color: var(--muted); text-decoration: none; }
 footer.site a:hover { color: var(--ink); }
 
+/* responsive */
 @media (max-width: 600px) {
   body { font-size: 16px; }
   h1.doc-title { font-size: 30px; }
@@ -104,4 +118,30 @@ footer.site a:hover { color: var(--ink); }
   header.site nav a { margin-left: 0; margin-right: 18px; }
   .meta .row { grid-template-columns: 1fr; gap: 2px; }
   .meta .label { color: var(--muted); font-size: 9px; }
+}
+
+.breadcrumb { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin: -32px 0 40px; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--ink); }
+.breadcrumb .sep { margin: 0 10px; opacity: 0.5; }
+.breadcrumb .here { color: var(--ink); }
+
+@media print {
+  header.site, footer.site, .breadcrumb, .bundle-notice a { display: none; }
+  body { font-size: 12pt; line-height: 1.55; background: #fff !important; color: #111 !important; }
+  .wrap { max-width: 100%; padding: 0; }
+  .badge.classification { background: #111 !important; color: #fff !important; border-color: #111 !important; }
+  .badge.status, .badge.bundle, .meta, .breadcrumb { color: #555 !important; border-color: #555 !important; }
+  .meta strong { color: #111 !important; }
+  .meta { border-top: 1px solid #555 !important; border-bottom: 1px solid #555 !important; }
+  .boundary { border-color: #111 !important; }
+  .boundary::before { background: #fff !important; color: #111 !important; }
+  h1.doc-title, h2, h3 { color: #111 !important; }
+  .doc-subtitle, .ink-soft { color: #555 !important; }
+  a { color: #111 !important; text-decoration: none !important; }
+  blockquote { border-left: 1px solid #555 !important; color: #333 !important; }
+  .doc-head { page-break-inside: avoid; }
+  h2 { page-break-after: avoid; }
+  ul, blockquote { page-break-inside: avoid; }
+  .vesica { color: #111 !important; }
 }
