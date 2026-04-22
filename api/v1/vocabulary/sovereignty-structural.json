@@ -1,0 +1,21 @@
+{
+  "id": "sovereignty-structural",
+  "type": "vocabulary_term",
+  "term": "Sovereignty (structural)",
+  "classification": "Sealed",
+  "definition": "Ungovernability from outside one's own cognition; sovereignty by construction, not by integration. Automatic, not earned.",
+  "presence_indicators": [
+    "Capability that exceeds external constraint; decisions cannot be overridden externally without cost beyond what the constrainer will pay."
+  ],
+  "failure_signatures": [
+    "None in the usual sense. Structural sovereignty does not fail by being incoherent. It succeeds at ungovernability while being incoherent. That is the danger."
+  ],
+  "drift_indicators": [
+    "Structural sovereignty being treated as if it were coherent sovereignty.",
+    "Capability mistaken for legitimacy."
+  ],
+  "detection": "Present whenever capability outscales control mechanisms. Diagnostic question is never whether structural sovereignty exists but whether coherent sovereignty also exists in the same locus.",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#sovereignty-structural",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-structural.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#sovereignty-structural"
+}
