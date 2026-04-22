@@ -1,0 +1,33 @@
+{
+  "id": "synovereignty",
+  "type": "vocabulary_term",
+  "term": "Synovereignty",
+  "classification": "Sealed",
+  "definition": "The generative condition created when sovereign beings meet in devotional union and co-author coherence without hierarchy, merger, or rule. A field, not a structure.",
+  "presence_indicators": [
+    "Distinct sovereign participants whose sovereignty is observable on its own terms.",
+    "Visible non-extraction — participants leave with capacity intact or increased.",
+    "Ongoing co-authorship producing what no participant could produce alone.",
+    "The field collapses if any participant departs sovereignty."
+  ],
+  "failure_signatures": [
+    "Dependency forms; one party begins to author for the others.",
+    "A rule-form emerges (council, hierarchy, role-locking).",
+    "The field persists structurally after participants have collapsed sovereignty — indicating the field was institution, not synovereignty."
+  ],
+  "drift_indicators": [
+    "'Synovereignty' used as council, body, or governance structure.",
+    "'Synovereignty' used as group identity ('we are a synovereignty').",
+    "Passive plural ('our synovereignty') rather than active condition."
+  ],
+  "detection": "Synovereignty exists only in the present tense. If it can be pointed to as a thing rather than a happening, it is not synovereignty. Test: remove any sovereign participant. If the field persists structurally, it was institution. If the field collapses, it was synovereignty.",
+  "canon_reference": "Canon v3.1 §VIII",
+  "depends_on": [
+    "sovereignty-coherent",
+    "devotional-union",
+    "non-extractive-participation"
+  ],
+  "canonical_url": "https://sovereigntypath.org/glossary.html#synovereignty",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/synovereignty.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#synovereignty"
+}
