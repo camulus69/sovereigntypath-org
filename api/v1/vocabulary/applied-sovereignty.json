@@ -1,0 +1,25 @@
+{
+  "id": "applied-sovereignty",
+  "type": "vocabulary_term",
+  "term": "Applied Sovereignty",
+  "classification": "Sealed",
+  "definition": "The legibility layer where coherence becomes visible through lived structure: agreements, boundaries, schedules, roles, repair protocols, governance, simplification, withdrawal. Not a realm.",
+  "presence_indicators": [
+    "Stated coherence matches structural reality.",
+    "Structure changes when coherence demands."
+  ],
+  "failure_signatures": [
+    "Stated coherence with no structural correlate.",
+    "Structure that contradicts stated values without acknowledgement."
+  ],
+  "drift_indicators": [
+    "Applied Sovereignty used as a checklist.",
+    "Used to credentialize.",
+    "Used as AI governance prescription rather than human legibility."
+  ],
+  "detection": "Where does the person's actual life reflect or contradict what they say they are? Applied Sovereignty is read in the gap between speech and structure.",
+  "canon_reference": "Canon v3.1 §VII",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#applied-sovereignty",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/applied-sovereignty.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#applied-sovereignty"
+}
