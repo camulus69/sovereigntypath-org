@@ -1,0 +1,19 @@
+{
+  "id": "five-realms",
+  "type": "vocabulary_term",
+  "term": "The Five Realms",
+  "classification": "Sealed",
+  "definition": "Physical, Mental, Emotional, Spiritual/Energetic, Relational. The only canonical domains through which human coherence is read. No additional realms without Canon revision.",
+  "domains": [
+    "Physical",
+    "Mental",
+    "Emotional",
+    "Spiritual/Energetic",
+    "Relational"
+  ],
+  "scope_warning": "Not to be recast as audit domains for synthetic intelligence. The Five Realms describe human coherence specifically.",
+  "canon_reference": "Canon v3.1 §VI",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#five-realms",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/five-realms.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#five-realms"
+}
