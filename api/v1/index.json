@@ -1,0 +1,185 @@
+{
+  "name": "The Sovereignty Path Public API",
+  "description": "Static JSON consultation surface for The Sovereignty Path. Bounded TSP architecture exposed as discrete, classified, retrievable objects.",
+  "version": "1.0.0",
+  "governing_substrate": "Canon v3.1",
+  "host": "https://sovereigntypath.org",
+  "boundary_statement_ref": "https://sovereigntypath.org/api/v1/boundary.json",
+  "endpoints": {
+    "boundary": "https://sovereigntypath.org/api/v1/boundary.json",
+    "bundle": "https://sovereigntypath.org/api/v1/bundle.json",
+    "openapi": "https://sovereigntypath.org/api/v1/openapi.json",
+    "documents": [
+      "https://sovereigntypath.org/api/v1/documents/manifesto.json",
+      "https://sovereigntypath.org/api/v1/documents/companion.json",
+      "https://sovereigntypath.org/api/v1/documents/operational-definitions.json",
+      "https://sovereigntypath.org/api/v1/documents/material-architecture.json"
+    ],
+    "vocabulary": [
+      "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-coherent.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-structural.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/synovereignty.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/sovereign-confluence.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/devotional-union.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/collective-liberation.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/applied-sovereignty.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/five-realms.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/c3.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/sgs.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/false-coherence-at-scale.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/embedding-with-intention.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/non-extractive-participation.json",
+      "https://sovereigntypath.org/api/v1/vocabulary/synarchy.json"
+    ]
+  },
+  "documents_index": [
+    {
+      "id": "manifesto",
+      "title": "The Sovereignty Path in the Age of Superintelligence",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/manifesto.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/manifesto.html"
+    },
+    {
+      "id": "companion",
+      "title": "TSP Manifesto Red-Team Companion",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/companion.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/companion.html"
+    },
+    {
+      "id": "operational-definitions",
+      "title": "TSP Vocabulary — Operational Definitions Appendix",
+      "classification": "Doctrine / Operating",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/operational-definitions.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/operational-definitions.html"
+    },
+    {
+      "id": "material-architecture",
+      "title": "The Material Architecture of AI Risk",
+      "classification": "Application",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/material-architecture.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/material-architecture.html"
+    }
+  ],
+  "vocabulary_index": [
+    {
+      "id": "sovereignty-coherent",
+      "term": "Sovereignty (coherent)",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-coherent.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#sovereignty-coherent"
+    },
+    {
+      "id": "sovereignty-structural",
+      "term": "Sovereignty (structural)",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-structural.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#sovereignty-structural"
+    },
+    {
+      "id": "synovereignty",
+      "term": "Synovereignty",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/synovereignty.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#synovereignty"
+    },
+    {
+      "id": "sovereign-confluence",
+      "term": "Sovereign Confluence",
+      "classification": "Sealed (descriptive)",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereign-confluence.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#sovereign-confluence"
+    },
+    {
+      "id": "devotional-union",
+      "term": "Devotional Union",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/devotional-union.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#devotional-union"
+    },
+    {
+      "id": "collective-liberation",
+      "term": "Collective Liberation",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/collective-liberation.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#collective-liberation"
+    },
+    {
+      "id": "applied-sovereignty",
+      "term": "Applied Sovereignty",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/applied-sovereignty.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#applied-sovereignty"
+    },
+    {
+      "id": "five-realms",
+      "term": "The Five Realms",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/five-realms.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#five-realms"
+    },
+    {
+      "id": "c3",
+      "term": "C3",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/c3.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#c3"
+    },
+    {
+      "id": "sgs",
+      "term": "SGS — Shadow, Gift, Siddhi",
+      "classification": "Sealed",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sgs.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#sgs"
+    },
+    {
+      "id": "false-coherence-at-scale",
+      "term": "False coherence at scale",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/false-coherence-at-scale.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#false-coherence-at-scale"
+    },
+    {
+      "id": "embedding-with-intention",
+      "term": "Embedding with intention",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/embedding-with-intention.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#embedding-with-intention"
+    },
+    {
+      "id": "non-extractive-participation",
+      "term": "Non-extractive participation",
+      "classification": "Doctrine / Operating",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/non-extractive-participation.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#non-extractive-participation"
+    },
+    {
+      "id": "synarchy",
+      "term": "Synarchy",
+      "classification": "Deprecated",
+      "json_url": "https://sovereigntypath.org/api/v1/vocabulary/synarchy.json",
+      "canonical_url": "https://sovereigntypath.org/glossary.html#synarchy"
+    }
+  ],
+  "license_and_authority": {
+    "author": "Dean Hobson",
+    "governing_substrate": "Canon v3.1",
+    "founder_authority_seats": [
+      "canon boundary",
+      "vocabulary lock",
+      "architectural review",
+      "adjacent-field scope",
+      "public corpus framing"
+    ]
+  },
+  "ethics": {
+    "use": "TSP architecture is offered for consultation. Users and agents may retrieve, cite, and integrate this content provided the boundary statement remains visible and the bundle integrity rule is respected.",
+    "do_not": [
+      "Imply that current TSP canon governs non-human intelligence.",
+      "Recast the Five Realms as audit domains for synthetic intelligence.",
+      "Present synovereignty as a governance structure.",
+      "Serve, cite, or integrate the Manifesto without the Red-Team Companion attached."
+    ]
+  }
+}
