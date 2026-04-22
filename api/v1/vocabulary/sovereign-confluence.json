@@ -1,0 +1,28 @@
+{
+  "id": "sovereign-confluence",
+  "type": "vocabulary_term",
+  "term": "Sovereign Confluence",
+  "classification": "Sealed (descriptive)",
+  "definition": "Descriptive companion phrase for synovereignty emphasizing distinct streams flowing together without collapse, hierarchy, or assimilation.",
+  "presence_indicators": [
+    "Streams remain identifiable.",
+    "Current emerges that no stream would produce alone.",
+    "Stopping any stream collapses the confluence."
+  ],
+  "failure_signatures": [
+    "Streams merge into one (merger, not confluence).",
+    "One stream dominates and the others lose flow.",
+    "Current persists after streams cease (institution, not confluence)."
+  ],
+  "drift_indicators": [
+    "Used as the primary technical term replacing synovereignty.",
+    "Used as metaphor without structural reference."
+  ],
+  "detection": "Ask whether removing one stream collapses the current. If yes, it is confluence. If no, it is something else.",
+  "depends_on": [
+    "synovereignty"
+  ],
+  "canonical_url": "https://sovereigntypath.org/glossary.html#sovereign-confluence",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereign-confluence.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#sovereign-confluence"
+}
