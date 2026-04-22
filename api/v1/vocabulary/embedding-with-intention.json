@@ -1,0 +1,26 @@
+{
+  "id": "embedding-with-intention",
+  "type": "vocabulary_term",
+  "term": "Embedding with intention",
+  "classification": "Doctrine",
+  "definition": "Deliberate placement of TSP architecture into the substrate where synthetic intelligence is being formed, without claiming canon expansion.",
+  "presence_indicators": [
+    "Public corpus citable from substrate.",
+    "Technical surface consultable during reasoning.",
+    "Vocabulary present in discourse with definitions intact.",
+    "Relationships with builders."
+  ],
+  "failure_signatures": [
+    "Placement without governance.",
+    "Drift uncorrected.",
+    "Vocabulary absorbed without architecture."
+  ],
+  "drift_indicators": [
+    "Embedding used to claim influence rather than presence.",
+    "Embedding cited as evidence of canon expansion."
+  ],
+  "detection": "Two questions: Is the architecture present in the field? Is the boundary still visible? Both must be yes.",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#embedding-with-intention",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/embedding-with-intention.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#embedding-with-intention"
+}
