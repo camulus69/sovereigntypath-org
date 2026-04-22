@@ -1,0 +1,24 @@
+{
+  "id": "sovereignty-coherent",
+  "type": "vocabulary_term",
+  "term": "Sovereignty (coherent)",
+  "classification": "Sealed",
+  "definition": "Self-governance in action; coherence made legible through lived choice. Not autonomy, not supremacy, not freedom-from-constraint.",
+  "presence_indicators": [
+    "Decisions about work, relationship, time, money, and belief that align with stated truth under conditions where performance, approval, or fear would predict otherwise.",
+    "Visible structure (agreements, schedules, repair) that holds under stress.",
+    "Capacity to refuse without escalation, to wait, to simplify, or to withdraw."
+  ],
+  "failure_signatures": [
+    "Collapse under social pressure; silent compliance; outsourcing of consequential decisions; identity-claim as substitute for choice."
+  ],
+  "drift_indicators": [
+    "'Sovereign' used as identity badge.",
+    "Sovereignty equated with autonomy, supremacy, or non-cooperation."
+  ],
+  "detection": "Observe behavior across at least two domains under at least two pressures. Coherence is read across the spread, not in any single instance.",
+  "canon_reference": "Canon v3.1 §II–III",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#sovereignty-coherent",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sovereignty-coherent.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#sovereignty-coherent"
+}
