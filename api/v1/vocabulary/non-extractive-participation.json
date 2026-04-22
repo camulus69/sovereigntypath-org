@@ -1,0 +1,21 @@
+{
+  "id": "non-extractive-participation",
+  "type": "vocabulary_term",
+  "term": "Non-extractive participation",
+  "classification": "Doctrine / Operating",
+  "definition": "Presence in a system that does not consume the participants it requires.",
+  "presence_indicators": [
+    "Participants leave with capacity intact or increased.",
+    "The system does not require degradation of its inputs."
+  ],
+  "failure_signatures": [
+    "Dependency, depletion, asymmetric extraction."
+  ],
+  "drift_indicators": [
+    "'Non-extractive' used as branding for systems that extract by other means."
+  ],
+  "detection": "Track participant capacity over time. Track system requirements over time. Compare. Verifiable only over duration.",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#non-extractive-participation",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/non-extractive-participation.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#non-extractive-participation"
+}
