@@ -1,0 +1,24 @@
+{
+  "id": "false-coherence-at-scale",
+  "type": "vocabulary_term",
+  "term": "False coherence at scale",
+  "classification": "Doctrine",
+  "definition": "The appearance of order, capability, or legitimacy in a system that is internally severed from embodied consequence, relational truth, or sacred value, scaled by amplification.",
+  "presence_indicators": [
+    "Fluent output.",
+    "Institutional polish.",
+    "Absence of consequence-bearing for harms produced.",
+    "Ideology that explains all outcomes within its own frame."
+  ],
+  "failure_signatures": [
+    "Collapse on contact with reality at the boundary the system has not been tested against."
+  ],
+  "drift_indicators": [
+    "The term used as a rhetorical weapon against disliked systems.",
+    "Used without structural diagnosis."
+  ],
+  "detection": "Where does the system's coherence break when it meets unmediated consequence?",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#false-coherence-at-scale",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/false-coherence-at-scale.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#false-coherence-at-scale"
+}
