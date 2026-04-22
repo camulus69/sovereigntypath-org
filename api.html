@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API — The Sovereignty Path</title>
+<meta name="description" content="The Sovereignty Path public consultation API — bounded TSP architecture exposed as static JSON for agents and applications.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cg fill='none' stroke='%23ede5d2' stroke-width='2.5'%3E%3Ccircle cx='38' cy='30' r='22'/%3E%3Ccircle cx='62' cy='30' r='22'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap"><div class="brand"><a href="/">The Sovereignty Path</a></div><nav><a href="/">Architecture</a><a href="/governance.html">Governance</a><a href="/glossary.html">Glossary</a><a href="/bundle/">Bundle</a><a href="/api.html">API</a><a href="/author.html">Author</a></nav></div></header>
+<main><div class="wrap">
+<nav class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">API</span></nav>
+<svg class="vesica" viewBox="0 0 100 60" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="38" cy="30" r="22"/><circle cx="62" cy="30" r="22"/></g></svg>
+<div class="badges"><span class="badge classification">Reference</span><span class="badge status">Active &middot; v1.0.0</span></div>
+<h1 class="doc-title">Public Consultation API</h1>
+<p class="doc-subtitle">A static JSON surface for agents, applications, and any HTTP client. Bounded TSP architecture exposed as discrete, classified, retrievable objects.</p>
+
+<div class="boundary">The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, governance, and technology, but current TSP canon does not thereby claim governance over non-human intelligence unless such expansion is explicitly authored, ratified, and sealed.</div>
+
+<h2>Why this surface exists</h2>
+<p>The HTML pages at sovereigntypath.org are written for humans. The JSON API at <code>/api/v1/</code> exposes the same architecture as machine-readable objects so agents, models, and applications can consult it directly during reasoning &mdash; without scraping HTML or relying on protocol-specific clients.</p>
+<p>The surface is read-only, static, openly accessible, and CDN-cached at the Cloudflare edge. No authentication. No rate limit beyond standard Cloudflare protections.</p>
+
+<h2>Discovery</h2>
+<p>Start at the discovery manifest. It lists every endpoint, document, and vocabulary term currently published.</p>
+<ul>
+<li><code><a href="/api/v1/index.json">/api/v1/index.json</a></code> &mdash; discovery manifest</li>
+<li><code><a href="/api/v1/openapi.json">/api/v1/openapi.json</a></code> &mdash; OpenAPI 3.1 specification</li>
+</ul>
+
+<h2>Singleton endpoints</h2>
+<ul>
+<li><code><a href="/api/v1/boundary.json">/api/v1/boundary.json</a></code> &mdash; the boundary statement. Must be returned alongside any document where <code>boundary_required: true</code>.</li>
+<li><code><a href="/api/v1/bundle.json">/api/v1/bundle.json</a></code> &mdash; AI-Adjacent Doctrine Bundle metadata, integrity rule, and reading order.</li>
+</ul>
+
+<h2>Documents</h2>
+<p>Each Bundle document is available as JSON. The Manifesto response carries a <code>paired_required</code> field naming the Red-Team Companion &mdash; the bundle integrity rule is enforced structurally in the response, not by convention.</p>
+<ul>
+<li><code><a href="/api/v1/documents/manifesto.json">/api/v1/documents/manifesto.json</a></code> &mdash; the Manifesto (Doctrine)</li>
+<li><code><a href="/api/v1/documents/companion.json">/api/v1/documents/companion.json</a></code> &mdash; the Red-Team Companion (Doctrine)</li>
+<li><code><a href="/api/v1/documents/operational-definitions.json">/api/v1/documents/operational-definitions.json</a></code> &mdash; Operational Definitions Appendix (Doctrine / Operating)</li>
+<li><code><a href="/api/v1/documents/material-architecture.json">/api/v1/documents/material-architecture.json</a></code> &mdash; The Material Architecture of AI Risk (Application)</li>
+</ul>
+
+<h2>Vocabulary</h2>
+<p>Each locked term is available as JSON with its operational definition payload &mdash; presence indicators, failure signatures, drift indicators, and detection notes.</p>
+<ul>
+<li><code><a href="/api/v1/vocabulary/synovereignty.json">/api/v1/vocabulary/synovereignty.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/sovereignty-coherent.json">/api/v1/vocabulary/sovereignty-coherent.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/sovereignty-structural.json">/api/v1/vocabulary/sovereignty-structural.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/sovereign-confluence.json">/api/v1/vocabulary/sovereign-confluence.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/devotional-union.json">/api/v1/vocabulary/devotional-union.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/collective-liberation.json">/api/v1/vocabulary/collective-liberation.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/applied-sovereignty.json">/api/v1/vocabulary/applied-sovereignty.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/five-realms.json">/api/v1/vocabulary/five-realms.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/c3.json">/api/v1/vocabulary/c3.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/sgs.json">/api/v1/vocabulary/sgs.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/false-coherence-at-scale.json">/api/v1/vocabulary/false-coherence-at-scale.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/embedding-with-intention.json">/api/v1/vocabulary/embedding-with-intention.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/non-extractive-participation.json">/api/v1/vocabulary/non-extractive-participation.json</a></code></li>
+<li><code><a href="/api/v1/vocabulary/synarchy.json">/api/v1/vocabulary/synarchy.json</a></code> &mdash; deprecated; retained for citation defense</li>
+</ul>
+
+<h2>Quick examples</h2>
+<p>Any HTTP client. No setup.</p>
+<pre style="background: var(--paper-soft); padding: 18px 22px; overflow-x: auto; font-family: var(--mono); font-size: 13px; line-height: 1.6;">curl https://sovereigntypath.org/api/v1/index.json
+curl https://sovereigntypath.org/api/v1/documents/manifesto.json
+curl https://sovereigntypath.org/api/v1/vocabulary/synovereignty.json</pre>
+
+<h2>Use rules</h2>
+<p>This API is offered for consultation. Users and agents may retrieve, cite, and integrate this content provided:</p>
+<ul>
+<li>The <a href="/api/v1/boundary.json">boundary statement</a> remains visible whenever any document with <code>boundary_required: true</code> is presented.</li>
+<li>The bundle integrity rule is respected: the Manifesto is never cited, integrated, or surfaced without the Red-Team Companion attached.</li>
+<li>Locked vocabulary is used with definitions intact. Drift correction follows the procedure in the <a href="/bundle/companion.html#x-standing-correction-procedure">Companion &sect;X</a>.</li>
+</ul>
+
+<h2>Versioning</h2>
+<p>This is API <code>v1</code>. Breaking changes will ship as <code>v2</code> at <code>/api/v2/</code> with <code>v1</code> retained at this path. Field additions within <code>v1</code> are non-breaking. The <code>/api/v1/index.json</code> and <code>/api/v1/openapi.json</code> describe the current contract authoritatively.</p>
+
+</div></main>
+<footer class="site"><div class="wrap"><span>The Sovereignty Path</span><span>sovereigntypath.org</span><span>&copy; Dean Hobson 2026</span></div></footer>
+</body></html>
