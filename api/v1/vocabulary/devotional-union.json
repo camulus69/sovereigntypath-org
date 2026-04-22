@@ -1,0 +1,29 @@
+{
+  "id": "devotional-union",
+  "type": "vocabulary_term",
+  "term": "Devotional Union",
+  "classification": "Sealed",
+  "definition": "Union chosen from freedom rather than need, where a third field emerges without collapse of self.",
+  "presence_indicators": [
+    "Chosen, not compelled. Either party can leave without identity collapse.",
+    "Presence and repair are practiced, not promised.",
+    "Polarity preserved without erasure.",
+    "Consent recurrently renewed, not assumed."
+  ],
+  "failure_signatures": [
+    "Dependency masquerading as devotion.",
+    "Merger that erases differentiation.",
+    "Obligation framed as devotion.",
+    "Cycles of crisis-and-repair without development."
+  ],
+  "drift_indicators": [
+    "'Devotion' used to extract loyalty.",
+    "'Union' used to justify loss of boundary.",
+    "Devotional language deployed across asymmetric power without governance discipline."
+  ],
+  "detection": "Three questions: Can either party withdraw without collapse? Does the relationship produce something neither could produce alone? Is consent recurrently renewed?",
+  "canon_reference": "Canon v3.1 §III",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#devotional-union",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/devotional-union.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#devotional-union"
+}
