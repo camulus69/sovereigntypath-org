@@ -1,0 +1,24 @@
+{
+  "id": "c3",
+  "type": "vocabulary_term",
+  "term": "C3",
+  "classification": "Sealed",
+  "definition": "CLEAR → CONNECT → CREATE. The operating logic embedded in all TSP work.",
+  "stages": [
+    {
+      "name": "CLEAR",
+      "purpose": "Release of false containers and distorted narratives; restores authorship."
+    },
+    {
+      "name": "CONNECT",
+      "purpose": "Restoration of coherence with body, truth, rhythm, relationship, meaning."
+    },
+    {
+      "name": "CREATE",
+      "purpose": "Establishment of structures, agreements, governance reflecting coherence."
+    }
+  ],
+  "canonical_url": "https://sovereigntypath.org/glossary.html#c3",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/c3.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#c3"
+}
