@@ -1,0 +1,11 @@
+{
+  "id": "synarchy",
+  "type": "vocabulary_term",
+  "term": "Synarchy",
+  "classification": "Deprecated",
+  "deprecated_at": "Canon v3.1",
+  "replaced_by": "synovereignty",
+  "rationale": "The '-archy' suffix encodes 'rule' semantics and risks drift into governance-structure language — precisely the failure mode this work refuses.",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#synarchy",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/synarchy.json"
+}
