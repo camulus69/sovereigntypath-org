@@ -1,0 +1,48 @@
+{
+  "id": "ai-adjacent-doctrine",
+  "type": "bundle",
+  "title": "The AI-Adjacent Doctrine Bundle",
+  "subtitle": "A governed offering into the field where synthetic intelligence is being formed — without claiming canon expansion.",
+  "classification_summary": "Doctrine and Application; not Canon expansion.",
+  "governing_substrate": "Canon v3.1",
+  "canonical_url": "https://sovereigntypath.org/bundle/",
+  "json_url": "https://sovereigntypath.org/api/v1/bundle.json",
+  "printable_pdf_url": "https://sovereigntypath.org/bundle/tsp-ai-adjacent-doctrine-bundle.pdf",
+  "boundary_statement_ref": "https://sovereigntypath.org/api/v1/boundary.json",
+  "integrity_rule": {
+    "rule_id": "bundle-integrity",
+    "statement": "The Manifesto cannot be served, retrieved, or cited without the Red-Team Companion attached as a paired artifact.",
+    "enforcement_layer": "Both publication-layer and retrieval-layer.",
+    "reference": "Cam Build Spec v3 §15."
+  },
+  "documents_in_reading_order": [
+    {
+      "id": "manifesto",
+      "title": "The Sovereignty Path in the Age of Superintelligence",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/manifesto.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/manifesto.html"
+    },
+    {
+      "id": "companion",
+      "title": "TSP Manifesto Red-Team Companion",
+      "classification": "Doctrine",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/companion.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/companion.html"
+    },
+    {
+      "id": "operational-definitions",
+      "title": "TSP Vocabulary — Operational Definitions Appendix",
+      "classification": "Doctrine / Operating",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/operational-definitions.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/operational-definitions.html"
+    },
+    {
+      "id": "material-architecture",
+      "title": "The Material Architecture of AI Risk",
+      "classification": "Application",
+      "json_url": "https://sovereigntypath.org/api/v1/documents/material-architecture.json",
+      "canonical_url": "https://sovereigntypath.org/bundle/material-architecture.html"
+    }
+  ]
+}
