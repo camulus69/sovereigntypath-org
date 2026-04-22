@@ -1,0 +1,24 @@
+{
+  "id": "sgs",
+  "type": "vocabulary_term",
+  "term": "SGS — Shadow, Gift, Siddhi",
+  "classification": "Sealed",
+  "definition": "States of coherence within a realm. Not a ranking system.",
+  "states": [
+    {
+      "name": "Shadow",
+      "description": "Fragmentation or distortion of coherence within a realm."
+    },
+    {
+      "name": "Gift",
+      "description": "Functional stability and integrity within a realm."
+    },
+    {
+      "name": "Siddhi",
+      "description": "Integrated coherence that no longer requires contrast, polarity, or reinforcement."
+    }
+  ],
+  "canonical_url": "https://sovereigntypath.org/glossary.html#sgs",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/sgs.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#sgs"
+}
