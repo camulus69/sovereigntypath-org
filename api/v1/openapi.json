@@ -1,0 +1,273 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "The Sovereignty Path Public API",
+    "version": "1.0.0",
+    "description": "Static JSON consultation surface for The Sovereignty Path. Bounded TSP architecture exposed as discrete, classified, retrievable objects governed by Canon v3.1.",
+    "contact": {
+      "name": "Dean Hobson",
+      "url": "https://sovereigntypath.org/author.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://sovereigntypath.org"
+    }
+  ],
+  "paths": {
+    "/api/v1/index.json": {
+      "get": {
+        "summary": "Discovery manifest — list all available endpoints, documents, and vocabulary.",
+        "responses": {
+          "200": {
+            "description": "Discovery manifest",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/boundary.json": {
+      "get": {
+        "summary": "The boundary statement singleton — must be returned alongside any adjacent-field response.",
+        "responses": {
+          "200": {
+            "description": "Boundary statement",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/bundle.json": {
+      "get": {
+        "summary": "AI-Adjacent Doctrine Bundle metadata, integrity rule, and reading order.",
+        "responses": {
+          "200": {
+            "description": "Bundle metadata",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{slug}.json": {
+      "get": {
+        "summary": "Retrieve a document by slug. Manifesto returns paired_required pointing to Companion.",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "manifesto": {
+                "value": "manifesto"
+              },
+              "companion": {
+                "value": "companion"
+              },
+              "operational-definitions": {
+                "value": "operational-definitions"
+              },
+              "material-architecture": {
+                "value": "material-architecture"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Document object",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/vocabulary/{slug}.json": {
+      "get": {
+        "summary": "Retrieve a vocabulary term with operational definition.",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "sovereignty-coherent": {
+                "value": "sovereignty-coherent"
+              },
+              "sovereignty-structural": {
+                "value": "sovereignty-structural"
+              },
+              "synovereignty": {
+                "value": "synovereignty"
+              },
+              "sovereign-confluence": {
+                "value": "sovereign-confluence"
+              },
+              "devotional-union": {
+                "value": "devotional-union"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Vocabulary term",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Boundary": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "version",
+          "text",
+          "sealed"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "boundary"
+          },
+          "version": {
+            "type": "string"
+          },
+          "sealed": {
+            "type": "boolean"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "Document": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "title",
+          "classification",
+          "status",
+          "version"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "document"
+          },
+          "title": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "Canon",
+              "Application",
+              "Doctrine",
+              "Doctrine / Operating",
+              "Inquiry"
+            ]
+          },
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "boundary_required": {
+            "type": "boolean"
+          },
+          "paired_required": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "vocabulary_used": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "body_text": {
+            "type": "string"
+          }
+        }
+      },
+      "VocabularyTerm": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "term",
+          "classification",
+          "definition"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "const": "vocabulary_term"
+          },
+          "term": {
+            "type": "string"
+          },
+          "classification": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "presence_indicators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "failure_signatures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "drift_indicators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "detection": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
