@@ -1,0 +1,11 @@
+{
+  "id": "boundary-statement",
+  "type": "boundary",
+  "version": "Canon v3.1",
+  "sealed": true,
+  "text": "The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, governance, and technology, but current TSP canon does not thereby claim governance over non-human intelligence unless such expansion is explicitly authored, ratified, and sealed.",
+  "applies_to": "All adjacent-field publications and AI-adjacent retrieval queries on the public TSP surface.",
+  "enforcement": "Returned with every document and bundle response where boundary_required=true. Required visible on public pages where adjacent-field misunderstanding could occur.",
+  "canonical_url": "https://sovereigntypath.org/governance.html",
+  "json_url": "https://sovereigntypath.org/api/v1/boundary.json"
+}
