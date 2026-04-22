@@ -1,0 +1,26 @@
+{
+  "id": "collective-liberation",
+  "type": "vocabulary_term",
+  "term": "Collective Liberation",
+  "classification": "Sealed",
+  "definition": "Sovereignty expressed beyond the individual through systems, culture, and stewardship; coherence become generative rather than personal.",
+  "presence_indicators": [
+    "Structural changes that increase others' sovereign capacity.",
+    "Coherence visible in systems, not just individuals.",
+    "Non-extractive scale."
+  ],
+  "failure_signatures": [
+    "Individual liberation framed as collective.",
+    "Collective identity formed at the cost of individual sovereignty.",
+    "Ideology that promises liberation while requiring obedience."
+  ],
+  "drift_indicators": [
+    "Used to recruit.",
+    "Used to flatten difference into shared cause."
+  ],
+  "detection": "Does the structure increase or decrease sovereign authorship in the people inside it? Liberation that decreases authorship is not collective liberation; it is collective absorption.",
+  "canon_reference": "Canon v3.1 §III",
+  "canonical_url": "https://sovereigntypath.org/glossary.html#collective-liberation",
+  "json_url": "https://sovereigntypath.org/api/v1/vocabulary/collective-liberation.json",
+  "operational_definition_url": "https://sovereigntypath.org/bundle/operational-definitions.html#collective-liberation"
+}
