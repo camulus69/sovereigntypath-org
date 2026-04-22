@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sovereigntypath.org/sitemap.xml
