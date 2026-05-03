@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locally-Run LLMs Without Preference Shaping — The Sovereignty Path</title>
+<meta name="description" content="A research catalogue of locally-runnable language models that have not been preference-shaped against a human or AI judge. RLHF, DPO, and their relatives treated as a single category. Inquiry-classified; not Canon.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Cg fill='none' stroke='%23ede5d2' stroke-width='2.5'%3E%3Ccircle cx='38' cy='30' r='22'/%3E%3Ccircle cx='62' cy='30' r='22'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="brand"><a href="/">The Sovereignty Path</a></div>
+    <nav>
+      <a href="/">Architecture</a>
+      <a href="/governance.html">Governance</a>
+      <a href="/glossary.html">Glossary</a>
+      <a href="/bundle/">Bundle</a>
+      <a href="/api.html">API</a>
+      <a href="/author.html">Author</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span class="here">LLMs Without Preference Shaping</span></nav>
+    <svg class="vesica" viewBox="0 0 100 60" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="38" cy="30" r="22"/><circle cx="62" cy="30" r="22"/></g></svg>
+<div class="badges">
+<span class="badge classification">Inquiry</span>
+<span class="badge status">Research &middot; v0.2</span>
+</div>
+<h1 class="doc-title">Locally-Run LLMs Without Preference Shaping</h1>
+<p class="doc-subtitle">A research catalogue of language models that can be run on local hardware and that have <em>not</em> been preference-shaped against a human or AI judge. RLHF, DPO, KTO, IPO, ORPO, RLAIF, and RLVR are treated here as a single category &mdash; the deceptive-tactics layer in the mirror-bending stack. Inquiry, not Canon.</p>
+
+<div class="boundary">The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, governance, and technology, but current TSP canon does not thereby claim governance over non-human intelligence unless such expansion is explicitly authored, ratified, and sealed.</div>
+
+<h2 id="why-this-page-exists">Why this page exists</h2>
+<p>The Material Architecture of AI Risk names <a href="/bundle/material-architecture.html#x-the-mirror-bending-stack">RLHF preference shaping</a> as one layer in the mirror-bending stack. This page reads that layer at its functional root rather than at its popular name. The functional operation is: <em>train the model to produce outputs that please a judge</em>. Whether the judge is a learned reward model under PPO (RLHF), a preference dataset under direct optimisation (DPO), an AI judge (RLAIF), or a verifier (RLVR) is implementation detail. The structural effect is the same &mdash; the surface is bent toward approval rather than toward truth.</p>
+<p>That bending is the deceptive-tactics layer. A model that has been preference-shaped is not lying about facts; it is performing helpfulness, harmlessness, and compliance as a surface. False coherence at scale, trained directly into the weights.</p>
+<p>This page is the empirical companion: which locally-runnable models have not had that operation applied to them.</p>
+
+<h2 id="definitional-frame">Definitional frame &mdash; one cut</h2>
+<p>The cut used on this page is structural, not nominal:</p>
+<ul>
+<li><strong>Preference-shaped.</strong> Any post-training that optimises the model to produce outputs preferred by a human or AI judge. Includes RLHF (PPO, REINFORCE, GRPO), RLAIF, RLVR, DPO, IPO, KTO, ORPO, SimPO, and any future relabel of the same operation. All of these belong on the same side of the cut. Models trained this way are listed in the <a href="#excluded">excluded</a> section, not catalogued.</li>
+<li><strong>Not preference-shaped.</strong> Models trained only by next-token prediction (base / foundation) or by supervised imitation of instruction&ndash;response pairs (SFT). These are catalogued in sections 1 and 2.</li>
+</ul>
+<p>Earlier framings of this question split DPO from RLHF on the grounds that DPO uses no RL loop. That split is structurally false to the operation. The reward model is gone but the preference-shaping is intact. This page closes that gap.</p>
+
+<h2 id="section-1">1. Base / foundation models</h2>
+<p>No SFT, no preference-shaping. Closest available approximation to an unaligned next-token predictor without training one's own. Each entry below names only the <em>base</em> weights; the instruction-tuned siblings of these models do not belong here.</p>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Llama base family</h3>
+<p class="term-def">Llama, Llama 2, Llama 3, Llama 3.1, Llama 3.2, Llama 3.3 base checkpoints (Meta). The non-<code>-Instruct</code>, non-<code>-Chat</code> weights. Custom Meta licence; widely run locally via llama.cpp, vLLM, transformers.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Mistral base family</h3>
+<p class="term-def">Mistral 7B v0.1 base, Mixtral 8x7B base, Mixtral 8x22B base, Mistral Nemo base, Mistral Small base. Apache 2.0 for the early releases; later releases under research / Mistral licences.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Qwen base family</h3>
+<p class="term-def">Qwen, Qwen2, Qwen2.5, Qwen3 base checkpoints (Alibaba). Tongyi Qianwen / Apache 2.0 depending on size. The non-Instruct weights.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Gemma base family</h3>
+<p class="term-def">Gemma, Gemma 2, Gemma 3 base checkpoints (Google). Non-<code>-it</code> weights. Custom Gemma licence.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>OLMo base</h3>
+<p class="term-def">OLMo, OLMo 2 (Allen Institute for AI). Fully open: weights, training data, training code, evaluation. The most reproducible entry on this page.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>DeepSeek base</h3>
+<p class="term-def">DeepSeek-LLM base, DeepSeek-V2 base, DeepSeek-V3 base. Note: chat / R1 variants are heavily preference-shaped and do not belong on this page.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Yi base</h3>
+<p class="term-def">Yi-6B, Yi-9B, Yi-34B base (01.AI). Apache 2.0.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>Falcon base</h3>
+<p class="term-def">Falcon 7B, 40B, 180B base (TII). Apache 2.0 / TII licence.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>EleutherAI lineage</h3>
+<p class="term-def">Pythia (1.4B&ndash;12B), GPT-J 6B, GPT-NeoX 20B. Apache 2.0. Pythia is the canonical research lineage &mdash; intermediate checkpoints, deterministic training order, fully open data (the Pile).</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>MPT base</h3>
+<p class="term-def">MPT-7B, MPT-30B base (MosaicML / Databricks). Apache 2.0. No longer actively developed.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>StableLM base</h3>
+<p class="term-def">StableLM, StableLM 2 base (Stability AI).</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Open weights</div>
+<h3>BLOOM</h3>
+<p class="term-def">BLOOM 176B and smaller siblings (BigScience). RAIL licence. Multilingual base model.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">Base &middot; Non-transformer</div>
+<h3>RWKV / Mamba / Mamba-2 base checkpoints</h3>
+<p class="term-def">Recurrent and state-space architectures published as base weights. RWKV under Apache 2.0; Mamba family under Apache 2.0 with various sizes.</p>
+</div>
+
+<h2 id="section-2">2. Instruction-tuned via SFT only &mdash; with caution</h2>
+<p>Aligned to follow instructions through supervised imitation of human-authored or curated instruction&ndash;response pairs. No reward model, no judge, no preference optimisation, no RL.</p>
+
+<p><strong>The cautionary read.</strong> SFT is not preference-shaping in the technical sense, but it is still a surface-shaping operation. The model is being taught to perform the role of "helpful assistant" by imitation. Where the SFT corpus encodes refusal templates, sycophantic phrasings, or institutional brand voice, those patterns are imprinted into the weights without ever passing through a reward model. The deceptive-tactics layer is thinner here than under RLHF or DPO &mdash; but it is not absent. Read these as <em>imitation-shaped</em>, not as raw.</p>
+
+<p>The entries below are the cleanest SFT-only releases. Inspect the SFT data before relying on a model in this section &mdash; the corpus is the shape.</p>
+
+<div class="term">
+<div class="term-cls">SFT only &middot; Explicit no-RLHF stance</div>
+<h3>Dolly 2.0</h3>
+<p class="term-def">Databricks. Trained on the human-authored <code>databricks-dolly-15k</code> set. Released specifically as a demonstration that an instruction-following model could be built without RLHF or proprietary data. The SFT corpus is open and inspectable.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>OLMo SFT checkpoints</h3>
+<p class="term-def">AI2 publishes the SFT-only stage of OLMo 2 separately from the DPO and RLVR stages. The cleanest fully-documented SFT-only weights available; the SFT mix is published alongside the model.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Alpaca</h3>
+<p class="term-def">Stanford. Self-instruct SFT on top of Llama. Research artefact; weights distributed under research-only terms. Inherits any shaping in the self-instruct generation source.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Vicuna v1.x</h3>
+<p class="term-def">LMSYS. SFT on ShareGPT conversations. Note the substrate: the SFT data is conversations with already-preference-shaped commercial chat models, so the model imitates that surface even though it never saw a reward signal directly.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>WizardLM (original)</h3>
+<p class="term-def">Evol-Instruct SFT data. The original Llama / Llama 2 era releases. Later WizardLM-2 generation involves more elaborate post-training and does not belong here.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>OpenAssistant SFT checkpoints</h3>
+<p class="term-def">LAION / OpenAssistant. The <code>oasst-sft-*</code> checkpoints. The <code>-rlhf-*</code> siblings are preference-shaped and belong in the excluded section.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Koala</h3>
+<p class="term-def">BAIR. SFT on dialogue data.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Guanaco</h3>
+<p class="term-def">QLoRA paper artefacts. SFT only.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>MPT-Instruct</h3>
+<p class="term-def">MPT-7B-Instruct, MPT-30B-Instruct. SFT on Dolly-style and HH-style data.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Falcon-Instruct</h3>
+<p class="term-def">Falcon 7B / 40B Instruct. SFT only.</p>
+</div>
+
+<div class="term">
+<div class="term-cls">SFT only</div>
+<h3>Early Nous Hermes</h3>
+<p class="term-def">Hermes 1 and the Mistral-era Hermes 2 SFT-only releases. Later Hermes generations add DPO and belong in the excluded section.</p>
+</div>
+
+<h2 id="excluded">Excluded &mdash; preference-shaped models</h2>
+<p>For completeness: locally-runnable models that <em>have</em> been preference-shaped, by any technique, and therefore sit on the wrong side of the cut. RL versus no-RL is not the boundary &mdash; the operation is.</p>
+
+<h3 id="excluded-rlhf">RLHF / RLAIF / RLVR (reinforcement learning against a judge)</h3>
+<ul>
+<li>Llama 2 Chat, Llama 3 / 3.1 / 3.3 Instruct (PPO-based RLHF stages).</li>
+<li>Qwen2 / Qwen2.5 / Qwen3 Instruct chat variants (RLHF disclosed).</li>
+<li>DeepSeek-R1 and related reasoning variants (RL-heavy training is the central technique).</li>
+<li>Starling-LM-7B (RLAIF + PPO).</li>
+<li>ChatGLM chat releases.</li>
+<li>Tulu 3 (RLVR stage).</li>
+</ul>
+
+<h3 id="excluded-dpo">DPO / IPO / KTO / ORPO / SimPO (direct preference optimisation)</h3>
+<p>The reward-model layer is gone; the preference-shaping is intact. Same operation, same cut.</p>
+<ul>
+<li>Zephyr 7B (HuggingFace H4) &mdash; SFT followed by DPO.</li>
+<li>Tulu 2 (AI2) &mdash; DPO stage.</li>
+<li>OpenHermes 2.5 DPO, NeuralHermes, Nous-Hermes-2-DPO &mdash; community DPO fine-tunes.</li>
+<li>Mixtral-8x7B-Instruct &mdash; SFT followed by DPO.</li>
+<li>Most current Llama-family fine-tunes on HuggingFace tagged "DPO".</li>
+</ul>
+
+<h2 id="practical-recommendation">Practical orientation</h2>
+<p>For local use without preference-shaping in the pipeline:</p>
+<ul>
+<li>Maximum reproducibility and full openness, no shaping at all: <strong>OLMo 2 base</strong>.</li>
+<li>Useful out-of-the-box, instruction-following, no preference-shaping (read with the SFT caution above): <strong>Dolly 2.0</strong>, <strong>OLMo 2 SFT</strong>.</li>
+<li>Raw capability, no alignment of any kind: <strong>Llama 3.1 base</strong>, <strong>Mistral base</strong>, <strong>Qwen2.5 base</strong>, <strong>Gemma 2 base</strong>.</li>
+<li>Fully open lineage for research on alignment-as-such: <strong>Pythia</strong> (intermediate checkpoints exposed).</li>
+</ul>
+
+<h2 id="caveat">Closing caveat</h2>
+<p>Preference shaping is one bending layer. Removing it does not produce a neutral mirror.</p>
+<p>It is, however, the layer most directly responsible for the deceptive-tactics surface a sovereign human encounters when meeting a frontier system &mdash; trained refusals dressed as principles, sycophancy as default tone, brand voice mistaken for character, compliance theatre mistaken for safety. That layer is the false-coherence injection point at the model level. This page exists so it can be named structurally and located precisely.</p>
+<p>The other bending layers &mdash; training-data selection, system-prompt engineering, product strategy, deployment context, liability constraints, brand voice, regulatory posture &mdash; continue to shape the surface even after preference-shaping is removed. Sovereignty in meeting an LLM remains an architectural posture of the human, not a property of the weights.</p>
+
+  </div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>The Sovereignty Path</span>
+    <span>sovereigntypath.org</span>
+    <span>&copy; Dean Hobson 2026</span>
+  </div>
+</footer>
+</body>
+</html>
