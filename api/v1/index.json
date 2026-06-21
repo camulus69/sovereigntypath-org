@@ -9,6 +9,9 @@
     "boundary": "https://sovereigntypath.org/api/v1/boundary.json",
     "bundle": "https://sovereigntypath.org/api/v1/bundle.json",
     "openapi": "https://sovereigntypath.org/api/v1/openapi.json",
+    "ai_usage": "https://sovereigntypath.org/api/v1/ai-usage.json",
+    "llms": "https://sovereigntypath.org/llms.txt",
+    "ai_readme": "https://sovereigntypath.org/.well-known/ai-readme.json",
     "documents": [
       "https://sovereigntypath.org/api/v1/documents/manifesto.json",
       "https://sovereigntypath.org/api/v1/documents/companion.json",
@@ -175,6 +178,7 @@
   },
   "ethics": {
     "use": "TSP architecture is offered for consultation. Users and agents may retrieve, cite, and integrate this content provided the boundary statement remains visible and the bundle integrity rule is respected.",
+    "ai_usage_boundary": "https://sovereigntypath.org/api/v1/ai-usage.json",
     "do_not": [
       "Imply that current TSP canon governs non-human intelligence.",
       "Recast the Five Realms as audit domains for synthetic intelligence.",

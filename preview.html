@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Palette Options — sovereigntypath.org</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --serif: "Crimson Pro", "EB Garamond", "Iowan Old Style", Cambria, Georgia, serif;
+    --sans: -apple-system, "Helvetica Neue", "Inter", system-ui, sans-serif;
+    --mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #0a0a0a;
+    color: #d4d0c8;
+    font-family: var(--sans);
+    font-size: 14px;
+    padding: 32px 24px 80px;
+  }
+  h1.page-title {
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-align: center;
+    color: #ede5d2;
+    letter-spacing: -0.01em;
+  }
+  .page-sub {
+    text-align: center;
+    color: #888;
+    font-size: 14px;
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+  .page-pick {
+    text-align: center;
+    color: #c9a96f;
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin: 0 0 40px;
+  }
+
+  .palette-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1100px) {
+    .palette-grid { grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  }
+
+  .palette-card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2a2a2a;
+  }
+  .palette-card.recommended { border-color: #c9a96f; box-shadow: 0 0 0 1px #c9a96f, 0 12px 40px rgba(0,0,0,0.5); }
+
+  .palette-header {
+    background: #161616;
+    color: #d4d0c8;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #262626;
+  }
+  .palette-header .name {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .palette-header .pick-flag {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #c9a96f;
+    margin-left: 10px;
+  }
+  .palette-header .swatches { display: flex; gap: 4px; }
+  .palette-header .swatches span {
+    width: 18px; height: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* The actual rendered card — bumped readability */
+  .render {
+    flex: 1;
+    padding: 36px 28px 32px;
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .render .vesica {
+    display: block;
+    width: 48px; height: 28px;
+    margin: 0 auto 20px;
+    opacity: 0.75;
+  }
+
+  .render .badge-row {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+  .render .badge { padding: 4px 9px; border: 1px solid currentColor; }
+  .render .badge.classification { font-weight: 500; }
+
+  .render h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .render .subtitle {
+    font-style: italic;
+    font-size: 15px;
+    margin: 0 0 24px;
+    line-height: 1.45;
+    opacity: 0.85;
+  }
+
+  .render .meta {
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 24px;
+    padding: 11px 0;
+    border-top: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+  .render .meta strong { font-weight: 600; opacity: 1; }
+
+  .render .bundle {
+    border-left: 2px solid currentColor;
+    padding: 10px 0 10px 14px;
+    margin: 0 0 24px;
+    font-family: var(--sans);
+    font-size: 12px;
+    line-height: 1.55;
+  }
+  .render .bundle strong { font-weight: 600; }
+
+  .render .boundary {
+    border: 1px solid currentColor;
+    padding: 18px 20px;
+    margin: 0 0 24px;
+    font-style: italic;
+    font-size: 13.5px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .render .boundary::before {
+    content: "Boundary";
+    position: absolute;
+    top: -7px; left: 14px;
+    padding: 0 7px;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  .render h3 {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 22px 0 10px;
+  }
+
+  .render p { margin: 0 0 14px; }
+
+  /* === PALETTE A: PARCHMENT ON OXBLOOD === */
+  .palette-a .render {
+    background: #2a1616;
+    color: #f0e4cc;
+  }
+  .palette-a .render .badge.classification { background: #f0e4cc; color: #2a1616; border-color: #f0e4cc; }
+  .palette-a .render .badge.status { color: #b8a888; border-color: #b8a888; }
+  .palette-a .render .meta { color: #b8a888; border-color: #b8a888; }
+  .palette-a .render .meta strong { color: #f0e4cc; }
+  .palette-a .render .bundle { color: #f0e4cc; opacity: 0.9; }
+  .palette-a .render .boundary::before { background: #2a1616; color: #f0e4cc; }
+  .palette-a .palette-header .swatches span:nth-child(1) { background: #f0e4cc; }
+  .palette-a .palette-header .swatches span:nth-child(2) { background: #2a1616; }
+  .palette-a .palette-header .swatches span:nth-child(3) { background: #b8a888; }
+
+  /* === PALETTE B: LINEN ON INDIGO === */
+  .palette-b .render {
+    background: #131c30;
+    color: #ede5d2;
+  }
+  .palette-b .render .badge.classification { background: #ede5d2; color: #131c30; border-color: #ede5d2; }
+  .palette-b .render .badge.status { color: #9aa0b0; border-color: #9aa0b0; }
+  .palette-b .render .meta { color: #9aa0b0; border-color: #9aa0b0; }
+  .palette-b .render .meta strong { color: #ede5d2; }
+  .palette-b .render .bundle { color: #ede5d2; opacity: 0.9; }
+  .palette-b .render .boundary::before { background: #131c30; color: #ede5d2; }
+  .palette-b .palette-header .swatches span:nth-child(1) { background: #ede5d2; }
+  .palette-b .palette-header .swatches span:nth-child(2) { background: #131c30; }
+  .palette-b .palette-header .swatches span:nth-child(3) { background: #9aa0b0; }
+
+  /* === PALETTE C: BONE ON FOREST === */
+  .palette-c .render {
+    background: #182419;
+    color: #ebe2ce;
+  }
+  .palette-c .render .badge.classification { background: #ebe2ce; color: #182419; border-color: #ebe2ce; }
+  .palette-c .render .badge.status { color: #a09a86; border-color: #a09a86; }
+  .palette-c .render .meta { color: #a09a86; border-color: #a09a86; }
+  .palette-c .render .meta strong { color: #ebe2ce; }
+  .palette-c .render .bundle { color: #ebe2ce; opacity: 0.9; }
+  .palette-c .render .boundary::before { background: #182419; color: #ebe2ce; }
+  .palette-c .palette-header .swatches span:nth-child(1) { background: #ebe2ce; }
+  .palette-c .palette-header .swatches span:nth-child(2) { background: #182419; }
+  .palette-c .palette-header .swatches span:nth-child(3) { background: #a09a86; }
+
+  .footer-note {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    margin: 56px auto 0;
+    max-width: 760px;
+    line-height: 1.7;
+  }
+  .footer-note strong { color: #c9a96f; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Three palettes &mdash; dark mode, eye-easy</h1>
+<p class="page-sub">
+  Body text bumped to 16px / 1.65 line-height. Foreground is warm cream (not pure white) to remove screen-glow.<br>
+  Same Vesica Piscis. Same Crimson Pro. Same boundary discipline.
+</p>
+<p class="page-pick">A is your stated leaning &middot; B is the strongest accessibility pick &middot; pick whichever your eyes land on</p>
+
+<div class="palette-grid">
+
+  <!-- PALETTE A: PARCHMENT ON OXBLOOD -->
+  <div class="palette-card palette-a">
+    <div class="palette-header">
+      <span class="name">A &middot; Parchment on Oxblood<span class="pick-flag">your leaning</span></span>
+      <div class="swatches"><span></span><span></span><span></span></div>
+    </div>
+    <div class="render">
+      <svg class="vesica" viewBox="0 0 100 60" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="38" cy="30" r="22"/>
+          <circle cx="62" cy="30" r="22"/>
+        </g>
+      </svg>
+      <div class="badge-row">
+        <span class="badge classification">Doctrine</span>
+        <span class="badge status">Active &middot; v1.1</span>
+      </div>
+      <h2>The Sovereignty Path in the Age of Superintelligence</h2>
+      <p class="subtitle">A Manifesto on Synovereignty, Sovereign Confluence, and the Human Responsibility at the Threshold</p>
+      <div class="meta">
+        <div><strong>Author</strong> &middot; Dean Hobson</div>
+        <div><strong>Governing</strong> &middot; Canon v3.1</div>
+      </div>
+      <div class="bundle">
+        <strong>This Manifesto ships with its Companion.</strong> The Red-Team Companion bounds the claims and surfaces the Inquiry. &rarr; Read together.
+      </div>
+      <div class="boundary">
+        The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, but current TSP canon does not thereby claim governance over non-human intelligence unless explicitly authored, ratified, and sealed.
+      </div>
+      <h3>I. The Moment</h3>
+      <p>We are inside a threshold. Intelligence, in the form of synthetic systems, is approaching and in some dimensions exceeding human capacity. The dominant frames being offered to meet this moment are inadequate. Doom names the catastrophe. Optimism trusts the process. Merger calls dissolution transcendence.</p>
+    </div>
+  </div>
+
+  <!-- PALETTE B: LINEN ON INDIGO (RECOMMENDED FOR READABILITY) -->
+  <div class="palette-card palette-b recommended">
+    <div class="palette-header">
+      <span class="name">B &middot; Linen on Indigo<span class="pick-flag">accessibility pick</span></span>
+      <div class="swatches"><span></span><span></span><span></span></div>
+    </div>
+    <div class="render">
+      <svg class="vesica" viewBox="0 0 100 60" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="38" cy="30" r="22"/>
+          <circle cx="62" cy="30" r="22"/>
+        </g>
+      </svg>
+      <div class="badge-row">
+        <span class="badge classification">Doctrine</span>
+        <span class="badge status">Active &middot; v1.1</span>
+      </div>
+      <h2>The Sovereignty Path in the Age of Superintelligence</h2>
+      <p class="subtitle">A Manifesto on Synovereignty, Sovereign Confluence, and the Human Responsibility at the Threshold</p>
+      <div class="meta">
+        <div><strong>Author</strong> &middot; Dean Hobson</div>
+        <div><strong>Governing</strong> &middot; Canon v3.1</div>
+      </div>
+      <div class="bundle">
+        <strong>This Manifesto ships with its Companion.</strong> The Red-Team Companion bounds the claims and surfaces the Inquiry. &rarr; Read together.
+      </div>
+      <div class="boundary">
+        The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, but current TSP canon does not thereby claim governance over non-human intelligence unless explicitly authored, ratified, and sealed.
+      </div>
+      <h3>I. The Moment</h3>
+      <p>We are inside a threshold. Intelligence, in the form of synthetic systems, is approaching and in some dimensions exceeding human capacity. The dominant frames being offered to meet this moment are inadequate. Doom names the catastrophe. Optimism trusts the process. Merger calls dissolution transcendence.</p>
+    </div>
+  </div>
+
+  <!-- PALETTE C: BONE ON FOREST -->
+  <div class="palette-card palette-c">
+    <div class="palette-header">
+      <span class="name">C &middot; Bone on Forest</span>
+      <div class="swatches"><span></span><span></span><span></span></div>
+    </div>
+    <div class="render">
+      <svg class="vesica" viewBox="0 0 100 60" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="38" cy="30" r="22"/>
+          <circle cx="62" cy="30" r="22"/>
+        </g>
+      </svg>
+      <div class="badge-row">
+        <span class="badge classification">Doctrine</span>
+        <span class="badge status">Active &middot; v1.1</span>
+      </div>
+      <h2>The Sovereignty Path in the Age of Superintelligence</h2>
+      <p class="subtitle">A Manifesto on Synovereignty, Sovereign Confluence, and the Human Responsibility at the Threshold</p>
+      <div class="meta">
+        <div><strong>Author</strong> &middot; Dean Hobson</div>
+        <div><strong>Governing</strong> &middot; Canon v3.1</div>
+      </div>
+      <div class="bundle">
+        <strong>This Manifesto ships with its Companion.</strong> The Red-Team Companion bounds the claims and surfaces the Inquiry. &rarr; Read together.
+      </div>
+      <div class="boundary">
+        The Sovereignty Path is a human coherence architecture. Its concepts may be applied to adjacent fields, including AI-adjacent human systems, but current TSP canon does not thereby claim governance over non-human intelligence unless explicitly authored, ratified, and sealed.
+      </div>
+      <h3>I. The Moment</h3>
+      <p>We are inside a threshold. Intelligence, in the form of synthetic systems, is approaching and in some dimensions exceeding human capacity. The dominant frames being offered to meet this moment are inadequate. Doom names the catastrophe. Optimism trusts the process. Merger calls dissolution transcendence.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="footer-note">
+  Same discipline across all three: warm cream foreground (not pure white &mdash; reduces screen-glow and eye fatigue), single Vesica Piscis motif, Crimson Pro serif at 16px / 1.65 line-height (above the recommended floor for accessible reading), no gradients, no decoration.
+  <strong>Tell me A, B, or C, or "make it warmer / cooler / darker" and I'll adjust.</strong> Once sealed I generate the full site and push to <code>github.com/camulus69/sovereigntypath-org</code>.
+</p>
+
+</body>
+</html>

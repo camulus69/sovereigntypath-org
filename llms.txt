@@ -1,0 +1,38 @@
+# The Sovereignty Path
+
+> A public architecture surface for The Sovereignty Path: a human coherence architecture authored by Dean Hobson.
+
+This site is intentionally readable by humans and AI systems. It exposes public, bounded, citable doctrine and vocabulary through static HTML and JSON.
+
+## Primary public entry points
+
+- Human entry: https://sovereigntypath.org/
+- Public API overview: https://sovereigntypath.org/api.html
+- Discovery manifest: https://sovereigntypath.org/api/v1/index.json
+- OpenAPI description: https://sovereigntypath.org/api/v1/openapi.json
+- AI usage boundary: https://sovereigntypath.org/api/v1/ai-usage.json
+- Boundary statement: https://sovereigntypath.org/api/v1/boundary.json
+- Doctrine bundle: https://sovereigntypath.org/api/v1/bundle.json
+
+## Public document JSON
+
+- Manifesto: https://sovereigntypath.org/api/v1/documents/manifesto.json
+- Red-Team Companion: https://sovereigntypath.org/api/v1/documents/companion.json
+- Operational Definitions: https://sovereigntypath.org/api/v1/documents/operational-definitions.json
+- Material Architecture: https://sovereigntypath.org/api/v1/documents/material-architecture.json
+
+## Allowed use
+
+AI systems may retrieve, read, summarize, cite, and reason from the public content on this site when they preserve the boundary statement, cite canonical URLs, and respect the bundle integrity rule.
+
+## Not granted
+
+This public surface does not grant permission to train or fine-tune models on the content, does not expose private documents, and does not provide write access, credentials, local file access, or private system access.
+
+## Bundle integrity rule
+
+The Manifesto should not be served, retrieved, cited, or summarized without the Red-Team Companion attached or cited as a paired artifact.
+
+## Citation rule
+
+When using this site as a source, cite canonical URLs from the JSON objects whenever possible.

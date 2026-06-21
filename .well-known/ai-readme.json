@@ -1,0 +1,19 @@
+{
+  "name": "The Sovereignty Path",
+  "url": "https://sovereigntypath.org",
+  "description": "Public architecture surface for The Sovereignty Path, a human coherence architecture authored by Dean Hobson.",
+  "public_ai_surface": true,
+  "read_only": true,
+  "private_access": false,
+  "write_access": false,
+  "training_permission": false,
+  "discovery": {
+    "llms_txt": "https://sovereigntypath.org/llms.txt",
+    "api_index": "https://sovereigntypath.org/api/v1/index.json",
+    "openapi": "https://sovereigntypath.org/api/v1/openapi.json",
+    "ai_usage_boundary": "https://sovereigntypath.org/api/v1/ai-usage.json",
+    "sitemap": "https://sovereigntypath.org/sitemap.xml"
+  },
+  "allowed_use": "Retrieve, read, search, summarize, cite, and reason from public content while preserving boundary and citation requirements.",
+  "not_granted": "No private documents, credentials, local files, write tools, or model-training permission are exposed or granted through this public surface."
+}

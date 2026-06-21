@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "The Sovereignty Path",
+  "name_for_model": "sovereignty_path_public",
+  "description_for_human": "Read-only public consultation surface for The Sovereignty Path.",
+  "description_for_model": "Use this read-only public API to retrieve and cite bounded public doctrine and vocabulary from The Sovereignty Path. Do not infer private access, write access, or training permission. Preserve boundary statements and bundle integrity requirements.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://sovereigntypath.org/api/v1/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://sovereigntypath.org/favicon.svg",
+  "legal_info_url": "https://sovereigntypath.org/api/v1/ai-usage.json"
+}

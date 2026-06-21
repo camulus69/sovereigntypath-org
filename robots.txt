@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
 Sitemap: https://sovereigntypath.org/sitemap.xml
+
+# Public AI usage boundary:
+# Search and real-time retrieval/citation are allowed for the public site.
+# Model training or fine-tuning permission is not granted by this file.
+# See: https://sovereigntypath.org/api/v1/ai-usage.json
+Content-Signal: search=yes,ai-input=yes,ai-train=no

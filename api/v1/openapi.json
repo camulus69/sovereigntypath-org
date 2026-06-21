@@ -54,6 +54,19 @@
         }
       }
     },
+    "/api/v1/ai-usage.json": {
+      "get": {
+        "summary": "AI usage boundary for public retrieval, citation, and non-training constraints.",
+        "responses": {
+          "200": {
+            "description": "AI usage boundary",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
     "/api/v1/documents/{slug}.json": {
       "get": {
         "summary": "Retrieve a document by slug. Manifesto returns paired_required pointing to Companion.",
